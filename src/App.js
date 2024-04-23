@@ -12,14 +12,20 @@ function App() {
     <div className="App">
         <div className='black-nav'>
           <h4>ReactBlog</h4>
-        </div>
-        <div className='list'>
-          <h4>{글제목[0]} <span onClick={()=>{따봉변경(따봉+1)}}>👍</span>{따봉} 
           <button onClick={()=>{
             let copy = [...글제목];
             copy[0] = '여자 코트 추천';
             setTitle(copy);
-            }}>제목수정</button></h4>
+            }}>제목변환</button>
+            <button onClick={()=>{
+              let copy2 = [...글제목];
+              copy2.sort();
+              setTitle(copy2);
+            }}>제목정렬</button>
+        </div>
+        <div className='list'>
+          <h4>{글제목[0]} <span onClick={()=>{따봉변경(따봉+1)}}>👍</span>{따봉} 
+        </h4>
           <p>{글내용}</p>
         </div>
         <div className='list'>
