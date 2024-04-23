@@ -38,14 +38,10 @@ function App() {
       </div>
       <div className="list">
         <h4>
-          {글제목[0]}{" "}
-          <span
-            onClick={() => {
+          {글제목[0]}
+          <span onClick={() => {
               따봉변경(따봉 + 1);
-            }}
-          >
-            👍
-          </span>
+            }}>👍</span>
           {따봉}
         </h4>
         <p>{글내용}</p>
@@ -56,7 +52,7 @@ function App() {
       </div>
       <div className="list">
         <h4 onClick={()=>{
-          {setModal(true)}
+          {modal ==false ? setModal(true):setModal(false)}
         }}>{글제목[2]}</h4>
         <p>{글내용}</p>
       </div>
