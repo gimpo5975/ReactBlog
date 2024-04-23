@@ -36,49 +36,20 @@ function App() {
           </button>
         </div>
       </div>
-      {/* <div className="list">
-        <h4>
-          {글제목[0]}
-          <span
-            onClick={() => {
-              따봉변경(따봉 + 1);
-            }}
-          >
-            👍
-          </span>
-          {따봉}
-        </h4>
-        <p>{글내용}</p>
-      </div>
-      <div className="list">
-        <h4>{글제목[1]}</h4>
-        <p>{글내용}</p>
-      </div>
-
-      <div className="list">
-        <h4
-          onClick={() => {
-            {
-              modal == false ? setModal(true) : setModal(false);
-            }
-          }}
-        >
-          {글제목[2]}
-        </h4>
-        <p>{글내용}</p>
-      </div>
-      {modal == true ? <Modal /> : null} */}
-
+     
       {
       글제목.map(function (a, i) {
         return (     
-        <div className="list">
-        <h4>{a}</h4>
+       
+       <div className="list" key={i}>
+        <div className="flex">
+        <h4 onClick={()=>{modal==false ? setModal(true):setModal(false)}}>{a}</h4><span onClick={()=>{따봉변경(따봉+1)}}>💟</span>{따봉}
+        </div>
         <p>{글내용}</p>
       </div>);
       })
       }
-
+      {modal == true ? <Modal/> : null}
     </div>
   );
 } //end of App

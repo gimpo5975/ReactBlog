@@ -11,8 +11,15 @@ div{
   text-align: left;
   border-bottom: 1px solid grey;
 }
-.list>h4:hover{
+.flex{
+  display: flex;
+  align-items: center;
+}
+.list h4, .list span:hover{
   cursor: pointer;
+}
+.list span{
+  margin-left: 5px;
 }
 .black-nav{
   display: flex;
