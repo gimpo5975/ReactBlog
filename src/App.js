@@ -44,14 +44,29 @@ function App() {
   );
 }//end of App
 
+
+
 function Modal(){
   return(
     <div className='modal'>
     <h4>제목</h4>
+    <Title></Title>
     <p>날짜</p>
     <p>상세내용</p>
+    <Content/>
   </div>
   );
 }//end of modal
+
+function Title(){
+  return(
+    <p>나는 제목이다</p>
+  );
+}
+function Content(){
+  return(
+    <p>나는 내용이야</p>
+  );
+}
 
 export default App;
