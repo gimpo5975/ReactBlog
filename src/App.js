@@ -36,12 +36,16 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="list">
+      {/* <div className="list">
         <h4>
           {글제목[0]}
-          <span onClick={() => {
+          <span
+            onClick={() => {
               따봉변경(따봉 + 1);
-            }}>👍</span>
+            }}
+          >
+            👍
+          </span>
           {따봉}
         </h4>
         <p>{글내용}</p>
@@ -50,15 +54,31 @@ function App() {
         <h4>{글제목[1]}</h4>
         <p>{글내용}</p>
       </div>
+
       <div className="list">
-        <h4 onClick={()=>{
-          {modal ==false ? setModal(true):setModal(false)}
-        }}>{글제목[2]}</h4>
+        <h4
+          onClick={() => {
+            {
+              modal == false ? setModal(true) : setModal(false);
+            }
+          }}
+        >
+          {글제목[2]}
+        </h4>
         <p>{글내용}</p>
       </div>
+      {modal == true ? <Modal /> : null} */}
+
       {
-        modal==true ? <Modal/> : null  
+      글제목.map(function (a, i) {
+        return (     
+        <div className="list">
+        <h4>{a}</h4>
+        <p>{글내용}</p>
+      </div>);
+      })
       }
+
     </div>
   );
 } //end of App
