@@ -8,7 +8,7 @@ function App() {
     "파이썬 독학",
   ]);
   let [글내용, setContent] = useState("2월 17일 발행");
-  let [따봉, 따봉변경] = useState(0);
+  let [good, setGood] = useState([0,0,0]);
   let [modal, setModal] = useState(false);
 
   return (
@@ -36,14 +36,17 @@ function App() {
           </button>
         </div>
       </div>
-     
       {
       글제목.map(function (a, i) {
         return (     
-       
        <div className="list" key={i}>
         <div className="flex">
-        <h4 onClick={()=>{modal==false ? setModal(true):setModal(false)}}>{a}</h4><span onClick={()=>{따봉변경(따봉+1)}}>💟</span>{따봉}
+        <h4 onClick={()=>{modal==false ? setModal(true):setModal(false)}}>{a}</h4>
+        <span onClick={()=>{
+          let cpGood = [...good];
+          cpGood[i] = cpGood[i]+1;
+          setGood(cpGood);
+        }}>💟</span>{good[i]}
         </div>
         <p>{글내용}</p>
       </div>);
