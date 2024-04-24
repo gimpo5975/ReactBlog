@@ -86,7 +86,7 @@ function Modal(props) {
    
       <div className="modal"  >
       <h4>{props.글제목[props.title]}</h4>
-      <p>날짜</p>
+      <p>날짜1</p>
       <p>상세내용</p>
       <button>글 수정</button>
     </div>
